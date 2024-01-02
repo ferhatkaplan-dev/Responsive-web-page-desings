@@ -2,9 +2,9 @@
 <html lang="en">
 
 <head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <link rel="stylesheet" href="style.css">
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <link rel="stylesheet" href="style.css" />
   <title>Responsive Navbar</title>
 </head>
 
@@ -18,15 +18,53 @@
         <li><a href="services">Services</a></li>
         <li><a href="contact">Contact</a></li>
       </ul>
-      <a href="#" class="aciton">Get Started</a>
-      <div class="toggle-btn">
-        <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor"
-          class="w-6 h-6">
+      <a href="#" class="action-btn">Get Started</a>
+
+      <!-- Mobile Menu Toggle Button -->
+      <div class="toggle-btn" id="toggle-btn">
+        <svg id="hamburger-icon" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5"
+          stroke="currentColor" class="w-6 h-6 ">
           <path stroke-linecap="round" stroke-linejoin="round" d="M3.75 6.75h16.5M3.75 12h16.5m-16.5 5.25h16.5" />
+        </svg>
+        <svg id="close-icon" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5"
+          stroke="currentColor" class="w-6 h-6 hidden">
+          <path stroke-linecap="round" stroke-linejoin="round" d="M6 18 18 6M6 6l12 12" />
         </svg>
       </div>
     </div>
+
+    <div id="dropdown-menu" class="dropdown-menu">
+      <ul class="links">
+        <li><a href="hero">Home</a></li>
+        <li><a href="about">About</a></li>
+        <li><a href="services">Services</a></li>
+        <li><a href="contact">Contact</a></li>
+        <li><a href="#" class="action-btn">Get Started</a></li>
+      </ul>
+    </div>
   </header>
+
+  <main>
+    <section id="hero">
+      <h1>Welcome</h1>
+      <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Voluptatem ea neque </p>
+    </section>
+  </main>
+
+  <script>
+    const toggleBtn = document.getElementById("toggle-btn");
+    const dropdownMenu = document.getElementById("dropdown-menu");
+    const hamburgerIcon = document.getElementById("hamburger-icon");
+    const closeIcon = document.getElementById("close-icon");
+
+    toggleBtn.addEventListener("click", toggleDropdownMenu);
+
+    function toggleDropdownMenu() {
+      dropdownMenu.classList.toggle("open");
+      hamburgerIcon.classList.toggle("hidden");
+      closeIcon.classList.toggle("hidden");
+    }
+  </script>
 </body>
 
 </html>

@@ -16,27 +16,6 @@ body {
   scroll-behavior: smooth;
 }
 
-.section__container {
-  max-width: 1200px;
-  margin: auto;
-  padding: 5rem 1rem;
-}
-
-.section__header {
-  margin-bottom: 1rem;
-  font-size: 2.5rem;
-  font-weight: 700;
-  line-height: 3rem;
-  color: hsl(240, 6%, 20%);
-  text-align: center;
-}
-
-.section__description {
-  color: hsl(220, 9%, 46%);
-  line-height: 1.75rem;
-  text-align: center;
-}
-
 .btn {
   padding: 0.75rem 1.5rem;
   outline: none;
@@ -188,4 +167,52 @@ nav .nav__btn {
     font-size: 1.5rem;
     border-radius: 100%;
   }
+}
+
+.section__container {
+  max-width: 1200px;
+  margin: auto;
+  padding: 5rem 1rem;
+}
+
+.section__header {
+  margin-bottom: 1rem;
+  font-size: 2.5rem;
+  font-weight: 700;
+  line-height: 3rem;
+  color: hsl(240, 6%, 20%);
+  text-align: center;
+}
+
+.section__description {
+  color: hsl(220, 9%, 46%);
+  line-height: 1.75rem;
+  text-align: center;
+}
+
+.header__container {
+  display: grid;
+  gap: 2rem;
+  overflow: hidden;
+}
+.header__container > .header__image img {
+  max-width: 600px;
+  margin-inline: auto;
+}
+.header__container > .header__content > h1 {
+  margin-bottom: 1rem;
+  font-size: 3.5rem;
+  font-weight: 700;
+  line-height: 4.5rem;
+  color: hsl(240, 6%, 20%);
+  text-align: center;
+}
+.header__container > .header__content > h1 > span {
+  color: hsl(29, 98%, 51%);
+}
+.header__container > .header__content > .section__description {
+  margin-bottom: 2rem;
+}
+.header__container > .header__content > .header__btn {
+  text-align: center;
 }/*# sourceMappingURL=main.css.map */

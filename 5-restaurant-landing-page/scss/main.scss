@@ -6,27 +6,6 @@
 
 @import url("https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap");
 
-.section__container {
-  max-width: $max-width;
-  margin: auto;
-  padding: 5rem 1rem;
-}
-
-.section__header {
-  margin-bottom: 1rem;
-  font-size: 2.5rem;
-  font-weight: 700;
-  line-height: 3rem;
-  color: $text-dark;
-  text-align: center;
-}
-
-.section__description {
-  color: $text-light;
-  line-height: 1.75rem;
-  text-align: center;
-}
-
 .btn {
   padding: 0.75rem 1.5rem;
   outline: none;
@@ -179,6 +158,61 @@ nav {
         font-size: 1.5rem;
         border-radius: 100%;
       }
+    }
+  }
+}
+
+.section__container {
+  max-width: $max-width;
+  margin: auto;
+  padding: 5rem 1rem;
+}
+
+.section__header {
+  margin-bottom: 1rem;
+  font-size: 2.5rem;
+  font-weight: 700;
+  line-height: 3rem;
+  color: $text-dark;
+  text-align: center;
+}
+
+.section__description {
+  color: $text-light;
+  line-height: 1.75rem;
+  text-align: center;
+}
+
+.header__container {
+  display: grid;
+  gap: 2rem;
+  overflow: hidden;
+
+  & > .header__image img {
+    max-width: 600px;
+    margin-inline: auto;
+  }
+
+  & > .header__content {
+    & > h1 {
+      margin-bottom: 1rem;
+      font-size: 3.5rem;
+      font-weight: 700;
+      line-height: 4.5rem;
+      color: $text-dark;
+      text-align: center;
+
+      & > span {
+        color: $primary-color;
+      }
+    }
+
+    & > .section__description {
+      margin-bottom: 2rem;
+    }
+
+    & > .header__btn {
+      text-align: center;
     }
   }
 }

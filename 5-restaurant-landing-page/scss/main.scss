@@ -21,8 +21,20 @@
   transition: 0.3s;
   cursor: pointer;
 
+  i {
+    position: relative;
+    padding-left: 1.5rem;
+    right: 1rem;
+    transition: 0.3s;
+  }
+
   &:hover {
     background: $primary-color-dark;
+  }
+
+  &:hover i {
+    position: relative;
+    right: 0;
   }
 }
 
@@ -34,20 +46,6 @@
   span {
     color: $text-dark;
   }
-}
-
-img {
-  display: block;
-  width: 100%;
-}
-
-a {
-  text-decoration: none;
-  transition: 0.3s;
-}
-
-ul {
-  list-style: none;
 }
 
 // Navigation styles
@@ -107,12 +105,11 @@ nav {
     left: 0;
     width: 100%;
     padding: 2rem;
-    list-style: none;
     display: flex;
     align-items: center;
     justify-content: center;
     flex-direction: column;
-    gap: 2rem;
+    gap: 3rem;
     background: $primary-color-light;
     transition: 0.5s;
     z-index: -1;
@@ -198,17 +195,19 @@ nav {
     align-items: center;
   }
 
-  & > .header__image img {
+  .header__image img {
     max-width: 600px;
     margin-inline: auto;
+    background: $primary-color;
 
     @include breakpoint-up(md) {
       grid-area: 1/2/2/3;
+      background: transparent;
     }
   }
 
-  & > .header__content {
-    & > h1 {
+  .header__content {
+    h1 {
       margin-bottom: 1rem;
       font-size: 3.5rem;
       font-weight: 700;
@@ -216,16 +215,16 @@ nav {
       color: $text-dark;
       text-align: center;
 
-      & > span {
+      span {
         color: $primary-color;
       }
     }
 
-    & > .section__description {
+    .section__description {
       margin-bottom: 2rem;
     }
 
-    & > .header__btn {
+    .header__btn {
       text-align: center;
     }
 
@@ -240,7 +239,7 @@ nav {
 }
 
 .special__container {
-  & :is(.section__header, .section__description) {
+  :is(.section__header, .section__description) {
     max-width: 600px;
     margin-inline: auto;
   }
@@ -269,39 +268,39 @@ nav {
         box-shadow: 10px 10px 40px rgba(0, 0, 0, 0.1);
       }
 
-      & > img {
+      img {
         max-width: 200px;
         margin-inline: auto;
         margin-bottom: 1rem;
         filter: drop-shadow(10px 10px 20px rgba(0, 0, 0, 0.3));
       }
 
-      & > h4 {
+      h4 {
         margin-bottom: 0.5rem;
         font-size: 1.5rem;
         font-weight: 700;
         color: $text-dark;
       }
 
-      & > p {
+      p {
         margin-bottom: 0.5rem;
         color: $text-light;
         line-height: 1.75rem;
       }
 
-      & > .special__ratings {
+      .special__ratings {
         margin-bottom: 1rem;
         font-size: 1rem;
         color: goldenrod;
       }
 
-      & > .special__footer {
+      .special__footer {
         display: flex;
         align-items: center;
         justify-content: center;
         gap: 10px;
 
-        & > .price {
+        .price {
           font-size: 1.2rem;
           font-weight: 600;
           color: $text-dark;
@@ -321,31 +320,31 @@ nav {
     align-items: center;
   }
 
-  & > .explore__image {
-    & > img {
+  .explore__image {
+    img {
       max-width: 400px;
       margin-inline: auto;
-      filter: drop-shadow(0 0 50px rgba(252, 127, 9, 0.4));
+      filter: drop-shadow(0 0 50px rgba(0, 0, 0, 0.2));
     }
   }
 
-  & > .explore__content {
-    & :is(.section__header, .section__description),
+  .explore__content {
+    :is(.section__header, .section__description),
     .explore__btn {
       text-align: left;
     }
 
-    & > .section__header {
+    .section__header {
       @include breakpoint-up(md) {
         max-width: 500px;
       }
     }
 
-    & > .section__description {
+    .section__description {
       margin-bottom: 2rem;
     }
 
-    & > .explore__btn {
+    .explore__btn {
       text-align: center;
     }
   }

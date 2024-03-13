@@ -1,0 +1,13 @@
+@use "sass:math";
+
+// font-size rem(30)
+// Throw and error if the parameter has a unit
+@function rem($pixel) {
+  // If $pixel has a unit, throw a error
+  @if math.is-unitless($pixel) {
+    // Divide $pixel by 16 to return rems
+    @return math.div($pixel, 16) + rem;
+  } @else {
+    @error "Don't use units when using the rem() function; only numbers.";
+  }
+}

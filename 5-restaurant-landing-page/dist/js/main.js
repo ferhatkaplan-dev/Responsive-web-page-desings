@@ -45,7 +45,7 @@ ScrollReveal().reveal(".explore__image img", {
   origin: "left",
 });
 
-ScrollReveal().reveal(".explore__content h1", {
+ScrollReveal().reveal(".explore__content .section__header", {
   ...scrollRevealOption,
   delay: 500,
 });

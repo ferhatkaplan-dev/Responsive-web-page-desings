@@ -195,9 +195,20 @@ nav .nav__btn {
   gap: 2rem;
   overflow: hidden;
 }
+@media (min-width: 768px) {
+  .header__container {
+    grid-template-columns: 4fr 3fr;
+    align-items: center;
+  }
+}
 .header__container > .header__image img {
   max-width: 600px;
   margin-inline: auto;
+}
+@media (min-width: 768px) {
+  .header__container > .header__image img {
+    grid-area: 1/2/2/3;
+  }
 }
 .header__container > .header__content > h1 {
   margin-bottom: 1rem;
@@ -215,4 +226,11 @@ nav .nav__btn {
 }
 .header__container > .header__content > .header__btn {
   text-align: center;
+}
+@media (min-width: 768px) {
+  .header__container > .header__content h1,
+  .header__container > .header__content .section__description,
+  .header__container > .header__content .header__btn {
+    text-align: left;
+  }
 }/*# sourceMappingURL=main.css.map */

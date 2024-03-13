@@ -193,9 +193,18 @@ nav {
   gap: 2rem;
   overflow: hidden;
 
+  @include breakpoint-up(md) {
+    grid-template-columns: 4fr 3fr;
+    align-items: center;
+  }
+
   & > .header__image img {
     max-width: 600px;
     margin-inline: auto;
+
+    @include breakpoint-up(md) {
+      grid-area: 1/2/2/3;
+    }
   }
 
   & > .header__content {
@@ -218,6 +227,14 @@ nav {
 
     & > .header__btn {
       text-align: center;
+    }
+
+    @include breakpoint-up(md) {
+      h1,
+      .section__description,
+      .header__btn {
+        text-align: left;
+      }
     }
   }
 }

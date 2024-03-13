@@ -21,25 +21,14 @@
   transition: 0.3s;
   cursor: pointer;
 
-  i {
-    position: relative;
-    padding-left: 1.5rem;
-    right: 1rem;
-    transition: 0.3s;
-  }
-
   &:hover {
     background: $primary-color-dark;
-  }
-
-  &:hover i {
-    position: relative;
-    right: 0;
   }
 }
 
 .logo a {
-  font-size: 1.5rem;
+  // font-size: 1.5rem;
+  font-size: clamp(f.rem(16), f.rem(16) + 2vw, f.rem(32));
   font-weight: 700;
   color: $primary-color;
 
@@ -209,7 +198,8 @@ nav {
   .header__content {
     h1 {
       margin-bottom: 1rem;
-      font-size: 3.5rem;
+      // font-size: 3.5rem;
+      font-size: clamp(f.rem(24), f.rem(16) + 3vw, f.rem(56));
       font-weight: 700;
       line-height: 4.5rem;
       color: $text-dark;
@@ -251,6 +241,7 @@ nav {
 
     @include breakpoint-up(md) {
       grid-template-columns: repeat(3, 1fr);
+      grid-template-rows: repeat(1, 1fr);
     }
 
     .special__card {
@@ -260,6 +251,9 @@ nav {
       transition: 0.3s;
 
       @include breakpoint-up(md) {
+        display: flex;
+        flex-direction: column;
+        justify-content: space-between;
         padding: 2rem;
         border-radius: 3rem;
       }

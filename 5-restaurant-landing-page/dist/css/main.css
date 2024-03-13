@@ -233,4 +233,99 @@ nav .nav__btn {
   .header__container > .header__content .header__btn {
     text-align: left;
   }
+}
+
+.special__container :is(.section__header, .section__description) {
+  max-width: 600px;
+  margin-inline: auto;
+}
+.special__container .special__grid {
+  margin-top: 4rem;
+  display: grid;
+  gap: 1rem;
+}
+@media (min-width: 768px) {
+  .special__container .special__grid {
+    grid-template-columns: repeat(3, 1fr);
+  }
+}
+.special__container .special__grid .special__card {
+  padding: 1rem;
+  text-align: center;
+  border-radius: 2rem;
+  transition: 0.3s;
+}
+@media (min-width: 768px) {
+  .special__container .special__grid .special__card {
+    padding: 2rem;
+    border-radius: 3rem;
+  }
+}
+.special__container .special__grid .special__card:hover {
+  box-shadow: 10px 10px 40px rgba(0, 0, 0, 0.1);
+}
+.special__container .special__grid .special__card > img {
+  max-width: 200px;
+  margin-inline: auto;
+  margin-bottom: 1rem;
+  filter: drop-shadow(10px 10px 20px rgba(0, 0, 0, 0.3));
+}
+.special__container .special__grid .special__card > h4 {
+  margin-bottom: 0.5rem;
+  font-size: 1.5rem;
+  font-weight: 700;
+  color: hsl(240, 6%, 20%);
+}
+.special__container .special__grid .special__card > p {
+  margin-bottom: 0.5rem;
+  color: hsl(220, 9%, 46%);
+  line-height: 1.75rem;
+}
+.special__container .special__grid .special__card > .special__ratings {
+  margin-bottom: 1rem;
+  font-size: 1rem;
+  color: goldenrod;
+}
+.special__container .special__grid .special__card > .special__footer {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 10px;
+}
+.special__container .special__grid .special__card > .special__footer > .price {
+  font-size: 1.2rem;
+  font-weight: 600;
+  color: hsl(240, 6%, 20%);
+}
+
+.explore__container {
+  display: grid;
+  gap: 2rem;
+  overflow: hidden;
+}
+@media (min-width: 768px) {
+  .explore__container {
+    grid-template-columns: repeat(2, 1fr);
+    align-items: center;
+  }
+}
+.explore__container > .explore__image > img {
+  max-width: 400px;
+  margin-inline: auto;
+  filter: drop-shadow(0 0 50px rgba(252, 127, 9, 0.4));
+}
+.explore__container > .explore__content :is(.section__header, .section__description),
+.explore__container > .explore__content .explore__btn {
+  text-align: left;
+}
+@media (min-width: 768px) {
+  .explore__container > .explore__content > .section__header {
+    max-width: 500px;
+  }
+}
+.explore__container > .explore__content > .section__description {
+  margin-bottom: 2rem;
+}
+.explore__container > .explore__content > .explore__btn {
+  text-align: center;
 }/*# sourceMappingURL=main.css.map */
